@@ -1,12 +1,12 @@
-## Mac 執行 MSSQL
+# Mac 執行 MSSQL
 
-### 1. 安裝 Docker
+## 1. 安裝 Docker
 
 > 記憶體建議調成４ GB
 
-### 2. 安裝 Azure Data Studio
+## 2. 安裝 Azure Data Studio
 
-### 3. 安裝 SQL SERVER (2019,2017) 容器映像檔
+## 3. 安裝 SQL SERVER (2019,2017) 容器映像檔
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password' --name mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
@@ -26,7 +26,7 @@ SA_PASSWORD=Password
 --name mssql
 ```
 
-### 4. 檢視 Docker 狀態
+## 4. 檢視 Docker 狀態
 
 ```bash
 docker ps //查看執行中的容器
@@ -34,7 +34,7 @@ docker ps //查看執行中的容器
 docker ps -a //查看所有容器
 ```
 
-### 5. 連接 SQL SERVER
+## 5. 連接 SQL SERVER
 
 ```bash
 docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <your_password>
@@ -42,7 +42,7 @@ docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S loc
 
 > 可由 Docker Dashboard or GUI Tool 操作
 
-### 6. 設定 Azure Data Studio 連接參數
+## 6. 設定 Azure Data Studio 連接參數
 
 - server -> localhost
 
@@ -50,9 +50,9 @@ docker exec -it <container_id|container_name> /opt/mssql-tools/bin/sqlcmd -S loc
 
 - password -> 設定之密碼
 
-### 7. 下載 AdventureWorks 範例資料庫
+## 7. 下載 AdventureWorks 範例資料庫
 
-### 8. 匯入資料庫
+## 8. 匯入資料庫
 
 terminal 移動至下載資料夾
 先創建存放資料庫之資料夾
