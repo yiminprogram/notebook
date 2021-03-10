@@ -76,3 +76,11 @@ docker cp <database_filename> <container_name>:/var/opt/mssql/backup
 4. Backup file path -> 選取新增 Backup 資料中存入之資料庫
 
 5. Restore
+
+### 如果 Restore 無法讀取，需確認資料庫檔案
+
+1. 選取資料庫檔案
+
+2. 右鍵選取檔案取得屬性
+
+3. 共享與權限，更改檔案權限，至少需開啟唯讀
