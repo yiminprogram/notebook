@@ -1,4 +1,4 @@
-## JS 常見縮寫
+## Javascript Abbreviation
 
 1. ES6 有新增語法糖(縮寫)以及新增語法
 
