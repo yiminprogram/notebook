@@ -2,84 +2,84 @@
 
 - current folder ( print working directory )
 
-```sh
-pwd
-```
+  ```sh
+  pwd
+  ```
 
 - create folder ( make directory )
 
-```sh
-mkdir folderName
-```
+  ```sh
+  mkdir <folderName>
+  ```
 
 - move to folder ( change directory )
 
-```sh
-cd folder/path
-```
+  ```sh
+  cd <folder/path>
+  ```
 
 - move to root
 
-```sh
-cd ~
-```
+  ```sh
+  cd ~
+  ```
 
 - back to previous folder
 
-```sh
-cd ..
-```
+  ```sh
+  cd ..
+  ```
 
 - list file
 
-```sh
-ls
+  ```sh
+  ls
 
-ls -a // contain .file ex. .gitignore
+  ls -a // contain .file ex. .gitignore
 
-ls -l // contain file detail
-```
+  ls -l // contain file detail
+  ```
 
 - create file
 
-```sh
-touch index.js
-```
+  ```sh
+  touch index.js
+  ```
 
 - copy file ( copy )
 
-```sh
-cp targetFile newFileName
-```
+  ```sh
+  cp <targetFile> <newFileName>
+  ```
 
 - change name ( move )
 
-```sh
-mv targetFile newFileName
-```
+  ```sh
+  mv <targetFile> <newFileName>
+  ```
 
 - delete file ( remove )
 
-```sh
-rm index.js
-```
+  ```sh
+  rm index.js
+  ```
 
 - clear terminal ( can scrollback )
 
-> `⌘ + K` can not scrollback
+  `⌘` + `K` can not scrollback
 
-> `ctrl + L` can scrollback
+  `ctrl` + `L` can scrollback
 
-```sh
-clear
-```
+  ```sh
+  clear
+  ```
 
 - show calendar
 
-```sh
-cal
+  ```sh
+  cal
 
-cal 2021
+  cal 2021
 
-cal 3 2021
-```
+  cal 3 2021
+  ```
