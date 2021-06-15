@@ -1,56 +1,76 @@
 # Vim Command
 
-- Insert Mode
+## Insert Mode
 
-  `i` into insert mode
+- `i` into insert mode
+- `o` new line
+- `a` append before cursor
 
-  `o` new line
+## Normal Mode
 
-  `a` append before cursor
+- `esc`
+- `ctrl` + `[`
 
-- Normal Mode
+## Window Control
 
-  `esc`
+- `ctrl` + `z` put vim in background
+- `fg` return to vimi
+- `zz` put line middle of window
+- `zt` put line top of window
+- `zb` put line bottom of window
 
-  `ctrl` + `[`
+## Move Cursor
 
-- Window Control
+- `h` left
+- `j` down
+- `k` up
+- `l` right
+- `w` next word
+- `W` next word (skip mark)
+- `b` back word
+- `B` back word (skip mark)
+- `}` next paragraph
+- `{` back paragraph
+- `gg` document top
+- `G` document bottom
+- `0` line start
+- `$` line end
+- `gk` back line
+- `gj` next line
 
-  `ctrl` + `z` put vim in background
+## Search
 
-  `fg` return to vim
+hightlight search results
 
-- Move Cursor
+> :set hlsearch
 
-  `h` left
+- `/` search
+- `n` next search result
+- `N` prev search result
+- `?` search (reverse)
+- `n` prev search result
+- `N` next search result
+- `*` search cursor word
+- `#` search cursor word (reverse)
+- `f` + `a` search next `a` in same line
+- `F` + `a` search next `a` in same line (reverse)
 
-  `j` down
+## Visual Mode
 
-  `k` up
+- `v` into visual mode
+- `V` select whole line
 
-  `l` right
+## Copy, Paste
 
-  `w` next word
-
-  `W` next word (skip mark)
-
-  `b` back word
-
-  `B` back word (skip mark)
-
-  `}` next paragraph
-
-  `{` back paragraph
-
-  `gg` document top
-
-  `G` document bottom
-
-  `0` line start
-
-  `$` line end 
-
-  `gk` back line
-
-  `gj` next line
-
+- `y` copy (yank)
+- `p` paste after cursor
+- `P` paste before cursor
+- `3` + `p` paste three times
+- `yy` copy whole line
+- `3yy` copy three line
+- `u` undo
+- `ctrl` + `r` redo
+- `"` + `a` + `y` copy word to register (a ~ z)
+- `"` + `a` + `p` paste `a` register word
+- `:reg` view all register content (vim has 48 register)
+- `:set clipboard=unnamed` let vim can use computer clipboard
