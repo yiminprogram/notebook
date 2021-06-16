@@ -141,13 +141,13 @@
 
 For example:
 
-```vim
+```
 $ :ls
 
   1. %a "index1.html"
   2.    "index2.html"
   3. #  "index3.html"
 
-$ :b3 // oen buffer number 3 file
+$ :b3 one buffer number 3 file
 
 ```
