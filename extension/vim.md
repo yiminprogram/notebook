@@ -10,6 +10,7 @@
   - [Copy, Paste](#copy-paste)
   - [Edit Multiple File](#edit-multiple-file)
   - [Buffer/Window/Tab](#bufferwindowtab)
+  - [Text Object](#text-object)
 
 ## Insert Mode
 
@@ -79,7 +80,18 @@
 ## Visual Mode
 
 - `v` into visual mode
-- `V` select whole line
+- `V` visual line
+- `ctrl` + `v` visual block mode (`I` into insert mode)
+- `vw` select word (contain last space)
+- `viw` select inner word
+- `vaw` select a word (around)
+- `vit` select inner tag (html -> textContent)
+- `vat` select a tag (html -> contain tag)
+- `vi"` select word in double quotes
+- `vi"` select word in double quotes (contain double quotes)
+- `v}` select block
+- `v{` select block (reverse)
+  > `v` can replace to `d`(delete) or `c`(change)
 
 ## Copy, Paste
 
@@ -148,6 +160,37 @@ $ :ls
   2.    "index2.html"
   3. #  "index3.html"
 
-$ :b3 one buffer number 3 file
+$ :b3 open buffer number 3 file
 
 ```
+
+## Text Object
+
+- Noun
+
+  - `w` = word
+  - `s` = sentence
+  - `p` = paragraph
+  - `t` = tag
+  - `'`, `"`, `(`, `)`, `[`, `]`, `{`, `}`
+
+- Verb
+
+  - `y` = yank
+  - `p` = paste
+  - `d` = delete
+  - `c` = change
+
+- Range
+
+  - `i` = inner
+  - `a` = a or around
+
+- Measure
+
+  - number
+
+- Example
+  - `vis` select inner sentence
+  - `vip` select inner paragraph
+  - `v3w` select three word
