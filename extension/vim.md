@@ -12,6 +12,10 @@
   - [Buffer/Window/Tab](#bufferwindowtab)
   - [Text Object](#text-object)
 
+> `vimtutor` open tutorial
+
+> `:help` open manual
+
 ## Insert Mode
 
 - `i` into insert mode
@@ -31,11 +35,18 @@
 - `<<` decrease indent
 - `3>>` three line indent (or select three line `>`)
 - `=` selected code auto indent
+- `~` case convert
+- `.` repeat last operate
+- `J` merge line
+- `ctrl` + `w` delete one word
+- `ctrl` + `u` delete content from cursor to start
 
 ## Normal Mode
 
 - `esc`
 - `ctrl` + `[`
+- `:!` + `command` command in terminal
+- `:r` + `command` copy cand paste command result
 
 ## Window Control
 
@@ -59,10 +70,17 @@
 - `{` back paragraph
 - `gg` document top
 - `G` document bottom
-- `0` line start
+- `0` start of line(contain indent)
+- `ctrl` + `^` start of line
 - `$` line end
 - `gk` back line
 - `gj` next line
+- `10G` move to number 10 of line
+- `ctrl` + `f` page down
+- `ctrl` + `b` page up
+- `zf` fold content (need select)
+- `zd` unfold content (or `l`)
+- `zfip` fold content
 
 ## Search
 
