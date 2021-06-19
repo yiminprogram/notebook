@@ -88,8 +88,6 @@
 - `n` next search result
 - `N` prev search result
 - `?` search (reverse)
-- `n` prev search result
-- `N` next search result
 - `*` search cursor word
 - `#` search cursor word (reverse)
 - `f` + `a` search next `a` in same line

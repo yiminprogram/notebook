@@ -1,0 +1,13 @@
+# MSSQL 指令
+
+- ### 資料庫重新命名
+
+```sql
+USE master;
+GO
+ALTER DATABASE DatabaseName SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+ALTER DATABASE DatabaseName MODIFY NAME = NewDatabaseName;
+GO
+ALTER DATABASE NewDatabaseName SET MULTI_USER;
+```
