@@ -1,5 +1,11 @@
 # Intersection Observer
 
+- [Intersection Observer](#intersection-observer)
+  - [Create observer](#create-observer)
+  - [Option setting](#option-setting)
+  - [Method](#method)
+  - [Code Example](#code-example)
+
 > IE 11 Not support, need to add polyfill
 
 ## Create observer
@@ -32,7 +38,7 @@ const observer = new IntersectionObserver(callback, { option });
 observer.observer(element);
 ```
 
-- cancle watch element
+- disable watch element
 
 ```js
 observer.unobserver(element);

@@ -35,9 +35,9 @@
   ```sh
   ls
 
-  ls -a // contain .file ex. .gitignore
+  ls -a # contain .file ex. .gitignore
 
-  ls -l // contain file detail
+  ls -l # contain file detail
   ```
 
 - create file
