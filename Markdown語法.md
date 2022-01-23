@@ -3,17 +3,17 @@
 ## 標題 Title
 
 ```md
-# Title 1 (h1)
+# Title1 (h1)
 
-## Title 2 (h2)
+## Title2 (h2)
 
-### Title 3 (h3)
+### Title3 (h3)
 
-#### Title 4 (h4)
+#### Title4 (h4)
 
-##### Title 5 (h5)
+##### Title5 (h5)
 
-###### Title 6 (h6)
+###### Title6 (h6)
 ```
 
 ## 段落 Paragraph
@@ -78,7 +78,7 @@
 2. item 2
 3. item 3
 
-## 跳脫字元
+## 跳脫字元 Escape Character
 
 `\`
 
