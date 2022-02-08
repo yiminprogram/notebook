@@ -1,4 +1,4 @@
-# Markdown 語法
+# Markdown
 
 ## 標題 Title
 
