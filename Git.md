@@ -20,6 +20,7 @@
   - [git reflog](#git-reflog)
   - [git clean](#git-clean)
   - [git config](#git-config)
+  - [git stash](#git-stash)
 
 ## git init
 
@@ -138,3 +139,10 @@
 - `git config --local user.email "user_email"` 設定使用者 Email(本地)
 - `git config --global core.editor "code --wait"` 設定使用 vscode 編輯 commit 訊息
 - `git config --global alias.st status` 別名設定(git status 轉換成 git st)
+
+## git stash
+
+- `git stash` 將所有已列入追蹤的檔案建立暫存版本
+- `git stash save` 將所有已列入追蹤的檔案建立暫存版本，save 參數可忽略，結果相同
+- `git stash -u` 將所有已追蹤和未追蹤的檔案建立暫存版本
+- `git stash pop` 取回暫存檔案，重新合併回來
