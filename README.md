@@ -1,7 +1,7 @@
-# 程式學習筆記
+# notebook
 
-1. [Git](Git.md)
+1. [git](git.md)
 
-2. [Markdown](Markdown.md)
+2. [markdown](markdown.md)
 
-3. [Android](/android/README.md)
+3. [android](/android/README.md)
