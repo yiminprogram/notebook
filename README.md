@@ -1,9 +1,7 @@
 # 程式學習筆記
 
-## Git
-
 1. [Git](Git.md)
 
-## Markdown
+2. [Markdown](Markdown.md)
 
-1. [Markdown](Markdown.md)
+3. [Android](/android/README.md)
