@@ -60,7 +60,7 @@
 
 ## git fetch
 
-單純下載未合併
+### 單純下載未合併
 
 - `git fetch repository_name branch_name`更新本地數據庫
 
@@ -68,7 +68,7 @@
 
 > git fetch + git merge
 
-下載並合併
+### 下載並合併
 
 - `git pull repository_name branch_name` 更新本地數據庫
 
@@ -96,6 +96,7 @@
 - `git checkout brnach_name` 切換到目標分支
 - `git checkout sha-1` 切換到目標 commit
 - `git checkout file_name` 還原工作目錄上已更改之檔案
+- `git checkout <commit> -- <file-path` restore commit file
 
 ## git merge
 
@@ -132,11 +133,11 @@
 
 ## git config
 
-- `git config --list` 查詢 git 設定列表
-- `git config --global user.name "user_name"` 設定使用者姓名(全域)
-- `git config --global user.email "user_email"` 設定使用者 Email(全域)
-- `git config --local user.name "user_name"` 設定使用者姓名(本地)
-- `git config --local user.email "user_email"` 設定使用者 Email(本地)
+- `git config --list` show git configuration
+- `git config --global user.name "user_name"` set git user name (global)
+- `git config --global user.email "user_email"` set git user email (global)
+- `git config --local user.name "user_name"` set git user name (local)
+- `git config --local user.email "user_email"` set git user email (local)
 - `git config --global core.editor "code --wait"` 設定使用 vscode 編輯 commit 訊息
 - `git config --global alias.st status` 別名設定(git status 轉換成 git st)
 
@@ -145,4 +146,11 @@
 - `git stash` 將所有已列入追蹤的檔案建立暫存版本
 - `git stash save` 將所有已列入追蹤的檔案建立暫存版本，save 參數可忽略，結果相同
 - `git stash -u` 將所有已追蹤和未追蹤的檔案建立暫存版本
-- `git stash pop` 取回暫存檔案，重新合併回來
+- `git stash pop` reset stash
+
+## git diff
+
+- `git diff` compare with last version
+- `git diff <commit> --name-only` compare with commit version only file name
+- `git diff <commit>` compare with commit version
+- `git diff <commit1> <commit2>` compare commit1 with commit2
