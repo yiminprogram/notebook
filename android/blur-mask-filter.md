@@ -1,5 +1,7 @@
 # Blur Mask Filter (Color)
 
+## ColorBlurEdgeView.java
+
 ```java
 public class ColorBlurEdgeView extends View
 {
