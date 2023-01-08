@@ -1,100 +1,102 @@
 # Vim
 
-## Move
+## 移動
 
-- `h` left
-- `j` down
-- `k` up
-- `l` right
-- `w` next word
-- `W` next word (skip mark)
-- `b` previous word
-- `B` previous word (skip mark)
-- `}` next paragraph
-- `{` previous paragraph
-- `gg` document top
-- `G` document bottom
-- `0` start of line
-- `ctrl` + `^` start of line
-- `$` end of line
-- `gk` previous line
-- `gj` next line
-- `10G` move to line number of 10
-- `ctrl` + `f` page down
-- `ctrl` + `b` page up
+- `h` 游標左移
+- `j` 游標下移
+- `k` 游標上移
+- `l` 游標右移
+- `w` 右移一個單字
+- `W` 右移一個單字(忽略標點符號)
+- `b` 左移一個單字
+- `B` 右移一個單字(忽略標點符號)
+- `}` 下一個段落
+- `{` 上一個段落
+- `gg` 移到文件最上面
+- `G` 移到文件最下面
+- `0` 移到行首
+- `ctrl` + `^` 移到行首
+- `$` 移到行尾
+- `gk` 移到上一行
+- `gj` 移到下一行
+- `10G` 移到第十行
+- `ctrl` + `f` 下一頁
+- `ctrl` + `b` 上一頁
 
-## Insert
+## Insert 模式
 
-- `i` insert
-- `I` insert (start of line)
-- `o` new line (after current line)
-- `O` new line (before current line)
-- `a` insert (after cursor)
-- `A` insert (end of line)
+- `i` 進入 insert 模式
+- `I` 行首新增
+- `o` 下方新增一行
+- `O` 上方新增一行
+- `a` 游標後新增
+- `A` 行尾新增
 
-## Delete
+## 刪除 (Delete)
 
-- `x` delete char
-- `d` delete selection
-- `D` delete to end of line
-- `dd` delete whole line
-- `ctrl` + `w` delete one word before cursor
-- `ctrl` + `u` delete from cursor to start
+- `x` 刪除一個字元
+- `d` 刪除選擇部份
+- `D` 刪除游標到行尾
+- `dd` 刪除一整行
+- `ctrl` + `w` 刪除游標前一個單字
+- `ctrl` + `u` 刪除游標到行首
 
-## Insert And Delete
+## 更改 (Change)
 
-- `c` delete selection and enter insert
-- `C` delete to end of line, and enter insert
+- `c` 刪除選取部份，進入 insert 模式
+- `C` 刪除游標到行尾，進入 insert 模式
 
-## Replce
+## 替換 (Replace)
 
-- `r` replace char
+- `r` 更改字元
 
-## Indent
+## 縮排 (Indent)
 
-- `>>` increase indent
-- `<<` decrease indent
-- `3>>` 3 line indent
-- `>` selected line increase indent
-- `<` selected line decrease indent
-- `=` selection auto indent
+- `>>` 增加縮排
+- `<<` 減少縮排
+- `3>>` 增加３個縮排
+- `>` 選取部份增加縮排
+- `<` 選取部份減少縮排
+- `=` 選取部份自動縮排
 
-## Other
+## 視窗移動
 
-- `~` case convert
-- `.` repeat last operation
-- `J` merge line
+- `zz` 游標移至中間
+- `zt` 游標移至上方
+- `zb` 游標移至下方
 
-## Window Control
+## 搜尋
 
-- `zz` center
-- `zt` top
-- `zb` bottom
+> `:set hlsearch`設定結果高亮，enter 後進入結果，`:noh`關閉高亮)
 
-## Search
+- `/` 搜尋
+- `?` 反向搜尋
+- `n` 移至下一個結果
+- `N` 移至上一個結果
+- `*` 搜尋游標所在的單字
+- `#` 反向搜尋游標所在的單字
+- `f` + `a` 搜尋同一行下一個`a`的字元
+- `F` + `a` 反向搜尋同一行下一個`a`的字元
 
-- `/` search
-- `?` search (reverse)
-- `n` next search result
-- `N` previous search result
-- `*` search cursor word
-- `#` search cursor word (reverse)
-- `f` + `a` search next `a` at current line
-- `F` + `a` search next `a` at current line (reverse)
+## 選取 (Visual Mode)
 
-## Select (Visual Mode)
+- `v` 選取字元
+- `V` 選取行
+- `ctrl` + `v` 新增游標選取，`I`進入 Insert 模式
+- `vw` 選取單字包含最後空白至下一個單字第一個字元
+- `viw` 選取單字
+- `vaw` 選取單字及空白
+- `vit` 選取標籤內容
+- `vat` 選取標籤內容及標籤
+- `vi"` 選取`""`中內容
+- `va"` 選取`""`中內容及`""`
+- `v}` 選取區塊
+- `v{` 反向選取區塊
 
-- `v` select char
-- `V` select line
-- `ctrl` + `v` select multiple (`I` insert mode)
-- `vw` select from current word to next word first char
-- `viw` select inner word
-- `vaw` select from current word to last space
-- `vit` select tag content
-- `vat` select tag content and tag
-- `vi"` select word in `""`
-- `va"` select word in `""` and `""`
-- `v}` select block
-- `v{` select block (reverse)
+> `v` 可以更換成 `d` (刪除) 或 `c` (修改)
 
-> `v` can replace to `d` (delete) or `c` (change)
+## 其他操作
+
+- `~` 更改大小寫
+- `.` 重複最後操作
+- `J` 選取部份合併
