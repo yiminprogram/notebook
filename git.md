@@ -45,6 +45,7 @@
 - `git commit` 將索引中所有檔案提交更新(會進入預設編輯器中編輯 commit 訊息)
 - `git commit -m "commit_message"` 將索引中所有檔案提交更新
 - `git commit -a -m "commit message"` 略過`git add`直接將索引中檔案提交更新
+- `git commit --amend` 將這次改動提交到上一個 commit 中
 
 ## git log
 
@@ -95,8 +96,8 @@
 
 - `git checkout brnach_name` 切換到目標分支
 - `git checkout sha-1` 切換到目標 commit
-- `git checkout file_name` 還原工作目錄上已更改之檔案
-- `git checkout <commit> -- <file-path` 恢復 commit 檔案
+- `git checkout <file-name>` 還原工作目錄上已更改之檔案
+- `git checkout <commit> -- <file-path>` 恢復 commit 檔案
 
 ## git merge
 
@@ -122,6 +123,8 @@
 - `git reset HEAD^ --soft` 還原前一個版本，檔案丟回索引
 - `git reset sha-1` 還原到特定 commit
 - `git reset -hard ORIG_HEAD` 還原合併前狀態
+- `git reset <file-name>` 將特定檔案還原到 working directory
+- `git reset .` 將全部檔案還原到 working directory
 
 ## git reflog
 
@@ -140,6 +143,7 @@
 - `git config --local user.email "user_email"` 設定 git 本地使用者信箱
 - `git config --global core.editor "code --wait"` 設定使用 vscode 編輯 commit 訊息
 - `git config --global alias.st status` 別名設定(git status 轉換成 git st)
+  > `git config --global alias.lg=log --pretty="%C(yellow)%h %C(green)(%cr)%C(red)%d %C(auto)%s" --graph --all`
 
 ## git stash
 
