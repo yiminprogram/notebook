@@ -1,49 +1,48 @@
-# Shell Script
+# bash script
 
-## Declare Shell
+## 基本語法
 
-find shell `which bash`
-
-```bash
+```sh
+# 宣告使用的shell
+# 尋找目標shell位置
+which shell_name
 #! /bin/bash
+
+# 註解:
 ```
 
-## Comment
+## 列印
 
-```bash
-# I am comment
-```
-
-## Print
-
-```bash
+```sh
 echo Hello World
 ```
 
-## Variable
+## 變數
 
-```bash
+```sh
 VARIABLE=Hello
 VARIABLE1="Hello World"
 VARIABLE2='Hello World'
 ```
 
-## Use Variable
+### 使用變數
 
-```bash
+```sh
 NAME=APPLE
 echo Hello, $NAME
 echo Heloo, ${NAME}
 ```
 
-## User input
+## 輸入值
 
 ```bash
 read -p "What's your name : " NAME
 echo Hello, $NAME
 ```
 
-## If
+## 條件判斷
+
+### if
 
 ```bash
 NAME=APPLE
@@ -53,9 +52,9 @@ then
 fi
 ```
 
-## If - Else
+### if - else
 
-```bash
+```sh
 VARIABLE="APPLE"
 if [ $VARIABLE = "APPLE" ]
 then
@@ -65,9 +64,9 @@ else
 fi
 ```
 
-## If - else if - else
+### if - else if - else
 
-```bash
+```sh
 VARIABLE="APPLE"
 
 if [ $VARIABLE = "APPLE" ]
@@ -81,7 +80,7 @@ else
 fi
 ```
 
-## Conditional
+## 條件修飾
 
 - `-eq` equal
 - `-ne` not eqaul
@@ -90,7 +89,7 @@ fi
 - `-lt` less than
 - `-le` less than or equal
 
-```bash
+```sh
 NUM1=5
 NUM2=5
 
@@ -102,12 +101,12 @@ else
 fi
 ```
 
-## File Conditional
+## 檔案狀態
 
 - `-d` file is directory
 - `-e` file is exist
 
-```bash
+```sh
 FILE="abc.txt"
 if [ -e $FILE ]
 then
@@ -125,9 +124,9 @@ else
 fi
 ```
 
-# Case Statement
+## Case 判斷
 
-```bash
+```sh
 read -p "Are you have an apple? Y/N " ANSWER
 case $ANSWER in
 	[yY] | [yY][eE][sS])
@@ -142,7 +141,7 @@ case $ANSWER in
 esac
 ```
 
-# For Loop
+## 迴圈
 
 ```bash
 NAMES="Apple Pen Pineapple"
@@ -152,7 +151,7 @@ do
 done
 ```
 
-# For Loop Rename File
+### 迴圈更改檔案名稱
 
 ```bash
 FILES=$(ls *.txt)
