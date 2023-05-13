@@ -8,9 +8,7 @@
 ## Model 轉 Json
 
 ```java
-Model model = new Model({
-    "Apple",100,true
-});
+Model model = new Model({"Apple",100,true});
 Gson gson = new Gson();
 String json = gson.toJson(foodModel);
 ```
