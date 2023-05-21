@@ -1,10 +1,5 @@
 # Gson
 
--   [Model 轉 Json](#model-轉-json)
--   [Json 轉 Model](#json-轉-model)
--   [List 轉 Json](#list-轉-json)
--   [Json 轉 List](#json-轉-list)
-
 ## Model 轉 Json
 
 ```java
