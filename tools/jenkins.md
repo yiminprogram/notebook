@@ -33,3 +33,21 @@ docker logs container_id
 
 6. 開啟瀏覽器 `http://localhost:8080/` 進行初始化設定
 7. Jenkins 的預設語言為瀏覽器語言，到瀏覽器語言設定將想要的語言放到第一順位，即可調整 Jenkins 顯示語言
+
+## 安裝可執行 Docker 的 Jenkins
+
+> 參考網址 [Jenkins Docker](https://www.jenkins.io/doc/book/installing/docker/)
+
+1. 建立 bridge network
+
+```sh
+docker network create jenkins
+```
+
+2.建立 docker dind
+
+```sh
+docker run --name jenkins-docker --detach --privileged --network jenkins --network-alias docker --env DOCKER_TLS_CERTDIR=/certs --volume jenkins-docker-certs:/certs/client --volume jenkins-data:/var/jenkins_home --publish 2376:2376 docker:dind --storage-driver overlay2
+```
+
+3. 建立客製化 Jenkins Image
