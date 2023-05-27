@@ -11,9 +11,9 @@
 docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
 ```
 
--   `-d` 背景執行
--   `-v jenkins_home:/var/jenkins_home` 創建 volumn(jenkins_home)mapping 到 container 裡面(/var/jenkins_home)，使用 volumn 目的為重啟 container Jenkins 設定會持續存在
--   `-p` port mapping
+- `-d` 背景執行
+- `-v jenkins_home:/var/jenkins_home` 創建 volumn(jenkins_home)mapping 到 container 裡面(/var/jenkins_home)，使用 volumn 目的為重啟 container Jenkins 設定會持續存在
+- `-p` port mapping
 
 5. 尋找 Jenkins Container ID
 
