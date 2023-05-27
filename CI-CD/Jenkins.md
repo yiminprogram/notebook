@@ -1,6 +1,6 @@
 # Jenkins
 
-## 安裝 Jenkins
+## 安裝一般 Jenkins
 
 1. 安裝 Docker
 2. Docker Hub 搜尋 [Jenkins](https://hub.docker.com/r/jenkins/jenkins)
@@ -11,19 +11,23 @@
 docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk11
 ```
 
-- `-d` 背景執行
-- `-v jenkins_home:/var/jenkins_home` 創建 volumn(jenkins_home)mapping 到 container 裡面(/var/jenkins_home)，使用 volumn 目的為重啟 container Jenkins 設定會持續存在
-- `-p` port mapping
+-   `-d` 背景執行
+-   `-v jenkins_home:/var/jenkins_home` 創建 volumn(jenkins_home)mapping 到 container 裡面(/var/jenkins_home)，使用 volumn 目的為重啟 container Jenkins 設定會持續存在
+-   `-p` port mapping
 
-5. 搜尋 Jenkins initial setup token
+5. 尋找 Jenkins Container ID
 
 ```sh
-docker ps # 尋找安裝好的Container ID
+docker ps
+```
 
-docker logs container_id # 尋找token，logs大概如下
-# Jenkins initial setup is required. An admin user has been created and a password generated.
-# Please use the following password to proceed to installation:
-# xxxxxxxxxxxxxxxxxxxx
+6. 獲取登入 token
+
+> Jenkins initial setup is required. An admin user has been created and a password generated. Please use the following password to proceed to installation:
+> xxxxxxxxxxxxxxxxxxxx
+
+```sh
+docker logs container_id
 ```
 
 6. 開啟瀏覽器 `http://localhost:8080/` 進行初始化設定
