@@ -23,7 +23,8 @@ docker ps
 
 6. 獲取登入 token
 
-> Jenkins initial setup is required. An admin user has been created and a password generated. Please use the following password to proceed to installation:
+> Jenkins initial setup is required. An admin user has been created and a password generated.
+> Please use the following password to proceed to installation:  
 > xxxxxxxxxxxxxxxxxxxx
 
 ```sh
