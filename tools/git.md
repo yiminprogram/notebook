@@ -257,6 +257,12 @@ git config --global alias.st status
 
 # my log setting
 git config --global alias.lg=log --pretty="%C(yellow)%h %C(green)(%cr)%C(red)%d %C(auto)%s" --graph --all
+
+# my log setting
+git config --global alias.lg=log --color --graph --pretty=format:'%Cred%h%Creset-%Cgreen[%cd]%C(yellow)(%cr)%C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s' --date=format:'%Y-%m-%d %H:%M:%S' --abbrev-commit --
+
+# my log setting
+git config --global alias.lga=log --all --color --graph --pretty=format:'%Cred%h%Creset-%Cgreen[%cd]%C(yellow)(%cr)%C(bold blue)<%an>%Creset%C(yellow)%d%Creset %s' --date=format:'%Y-%m-%d %H:%M:%S' --abbrev-commit --
 ```
 
 ## git stash
