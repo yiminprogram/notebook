@@ -86,3 +86,30 @@ public class MainActivity extends AppCompatActivity implements MyDialogFragment.
     }
 }
 ```
+
+## FULL SCREEN SETTING
+
+### STYLE
+
+```xml
+<style name="DialogFragmentStyle" parent="Theme.AppCompat.Dialog" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+</style>
+```
+
+???
+
+> 一定要設定 window setBackgroundDrawable 不然會有一個 padding 存在，無法全螢幕
+
+```java
+@NonNull
+    @Override
+    public Dialog onCreateDialog( Bundle savedInstanceState )
+    {
+        Dialog dialog = super.onCreateDialog( savedInstanceState );
+        dialog.getWindow().setBackgroundDrawable( new ColorDrawable( Color.TRANSPARENT ) );
+        return dialog;
+    }
+```
